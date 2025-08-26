@@ -1,0 +1,210 @@
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+/home/eaguayo/.local/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:701: Checkpoint directory /home/eaguayo/workspace/DeepLearning/taller1/checkpoints exists and is not empty.
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Modo completo activado: usando configuración completa.
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+┏━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓
+┃   ┃ Name      ┃ Type               ┃ Params ┃ Mode  ┃
+┡━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩
+│ 0 │ model     │ ResNet             │ 23.5 M │ train │
+│ 1 │ criterion │ CrossEntropyLoss   │      0 │ train │
+│ 2 │ accuracy  │ MulticlassAccuracy │      0 │ train │
+│ 3 │ test_acc  │ MulticlassAccuracy │      0 │ train │
+└───┴───────────┴────────────────────┴────────┴───────┘
+Trainable params: 23.5 M                                                                                                                 
+Non-trainable params: 0                                                                                                                  
+Total params: 23.5 M                                                                                                                     
+Total estimated model params size (MB): 94                                                                                               
+Modules in train mode: 154                                                                                                               
+Modules in eval mode: 0                                                                                                                  
+Modo completo activado: usando configuración completa.
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+Modo completo activado: usando configuración completa.
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+Modo completo activado: usando configuración completa.
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+[rank: 0] Metric valid_loss improved. New best score: 0.879
+[rank: 1] Metric valid_loss improved. New best score: 0.879
+[rank: 3] Metric valid_loss improved. New best score: 0.879
+[rank: 2] Metric valid_loss improved. New best score: 0.879
+Epoch 0/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.879 valid_acc: 0.716
+[rank: 2] Metric valid_loss improved by 0.125 >= min_delta = 0.0. New best score: 0.754
+[rank: 3] Metric valid_loss improved by 0.125 >= min_delta = 0.0. New best score: 0.754
+[rank: 0] Metric valid_loss improved by 0.125 >= min_delta = 0.0. New best score: 0.754
+[rank: 1] Metric valid_loss improved by 0.125 >= min_delta = 0.0. New best score: 0.754
+Epoch 1/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.63it/s v_num: 27 valid_loss: 0.754 valid_acc: 0.748
+[rank: 0] Metric valid_loss improved by 0.046 >= min_delta = 0.0. New best score: 0.708
+[rank: 3] Metric valid_loss improved by 0.046 >= min_delta = 0.0. New best score: 0.708
+[rank: 1] Metric valid_loss improved by 0.046 >= min_delta = 0.0. New best score: 0.708
+[rank: 2] Metric valid_loss improved by 0.046 >= min_delta = 0.0. New best score: 0.708
+Epoch 2/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.708 valid_acc: 0.757
+[rank: 0] Metric valid_loss improved by 0.028 >= min_delta = 0.0. New best score: 0.681
+[rank: 3] Metric valid_loss improved by 0.028 >= min_delta = 0.0. New best score: 0.681
+[rank: 2] Metric valid_loss improved by 0.028 >= min_delta = 0.0. New best score: 0.681
+[rank: 1] Metric valid_loss improved by 0.028 >= min_delta = 0.0. New best score: 0.681
+Epoch 3/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.64it/s v_num: 27 valid_loss: 0.681 valid_acc: 0.768
+[rank: 3] Metric valid_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.662
+[rank: 2] Metric valid_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.662
+[rank: 1] Metric valid_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.662
+[rank: 0] Metric valid_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.662
+Epoch 4/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.64it/s v_num: 27 valid_loss: 0.662 valid_acc: 0.768
+[rank: 0] Metric valid_loss improved by 0.021 >= min_delta = 0.0. New best score: 0.641
+[rank: 1] Metric valid_loss improved by 0.021 >= min_delta = 0.0. New best score: 0.641
+[rank: 3] Metric valid_loss improved by 0.021 >= min_delta = 0.0. New best score: 0.641
+[rank: 2] Metric valid_loss improved by 0.021 >= min_delta = 0.0. New best score: 0.641
+Epoch 5/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.64it/s v_num: 27 valid_loss: 0.641 valid_acc: 0.783
+[rank: 3] Metric valid_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.629
+[rank: 2] Metric valid_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.629
+[rank: 0] Metric valid_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.629
+[rank: 1] Metric valid_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.629
+Epoch 6/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.629 valid_acc: 0.781
+[rank: 3] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.619
+[rank: 0] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.619
+[rank: 2] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.619
+[rank: 1] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.619
+Epoch 7/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.619 valid_acc: 0.782
+[rank: 3] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.617
+[rank: 2] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.617
+[rank: 0] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.617
+[rank: 1] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.617
+Epoch 8/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.617 valid_acc: 0.786
+[rank: 0] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.608
+[rank: 1] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.608
+[rank: 2] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.608
+[rank: 3] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.608
+Epoch 9/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.608 valid_acc: 0.784
+Epoch 10/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.632 valid_acc: 0.776
+[rank: 0] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.607
+[rank: 3] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.607
+[rank: 1] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.607
+[rank: 2] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.607
+Epoch 11/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.59it/s v_num: 27 valid_loss: 0.607 valid_acc: 0.787
+Epoch 12/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.610 valid_acc: 0.787
+[rank: 0] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.597
+[rank: 1] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.597
+[rank: 2] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.597
+[rank: 3] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.597
+Epoch 13/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.597 valid_acc: 0.789
+[rank: 0] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.594
+[rank: 1] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.594
+[rank: 3] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.594
+[rank: 2] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.594
+Epoch 14/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.594 valid_acc: 0.787
+Epoch 15/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.602 valid_acc: 0.789
+[rank: 0] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.592
+[rank: 3] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.592
+[rank: 1] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.592
+[rank: 2] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.592
+Epoch 16/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.592 valid_acc: 0.791
+[rank: 0] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.588
+[rank: 3] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.588
+[rank: 1] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.588
+[rank: 2] Metric valid_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.588
+Epoch 17/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.588 valid_acc: 0.794
+[rank: 1] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.587
+[rank: 0] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.587
+[rank: 3] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.587
+[rank: 2] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.587
+Epoch 18/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.587 valid_acc: 0.795
+[rank: 0] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.585
+[rank: 3] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.585
+[rank: 2] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.585
+[rank: 1] Metric valid_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.585
+Epoch 19/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.585 valid_acc: 0.796
+Epoch 20/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.600 valid_acc: 0.786
+[rank: 0] Metric valid_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.580
+[rank: 2] Metric valid_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.580
+[rank: 3] Metric valid_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.580
+[rank: 1] Metric valid_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.580
+Epoch 21/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.580 valid_acc: 0.791
+Epoch 22/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.64it/s v_num: 27 valid_loss: 0.597 valid_acc: 0.789
+[rank: 0] Metric valid_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.580
+[rank: 1] Metric valid_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.580
+[rank: 2] Metric valid_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.580
+[rank: 3] Metric valid_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.580
+Epoch 23/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.580 valid_acc: 0.792
+[rank: 0] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.571
+[rank: 3] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.571
+[rank: 1] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.571
+[rank: 2] Metric valid_loss improved by 0.009 >= min_delta = 0.0. New best score: 0.571
+Epoch 24/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.571 valid_acc: 0.794
+[rank: 0] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.569
+[rank: 3] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.569
+[rank: 1] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.569
+[rank: 2] Metric valid_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.569
+Epoch 25/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.569 valid_acc: 0.795
+[rank: 0] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.560
+[rank: 3] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.560
+[rank: 2] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.560
+[rank: 1] Metric valid_loss improved by 0.010 >= min_delta = 0.0. New best score: 0.560
+Epoch 26/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.560 valid_acc: 0.801
+Epoch 27/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.576 valid_acc: 0.796
+Epoch 28/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.579 valid_acc: 0.787
+Epoch 29/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.576 valid_acc: 0.790
+Epoch 30/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.569 valid_acc: 0.792
+Epoch 31/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.59it/s v_num: 27 valid_loss: 0.573 valid_acc: 0.794
+Epoch 32/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.58it/s v_num: 27 valid_loss: 0.563 valid_acc: 0.801
+Epoch 33/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.61it/s v_num: 27 valid_loss: 0.564 valid_acc: 0.803
+Epoch 34/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.573 valid_acc: 0.791
+Epoch 35/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.579 valid_acc: 0.793
+Epoch 36/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.60it/s v_num: 27 valid_loss: 0.573 valid_acc: 0.796
+Epoch 37/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.568 valid_acc: 0.798
+Epoch 38/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.582 valid_acc: 0.795
+Epoch 39/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.583 valid_acc: 0.794
+Epoch 40/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:04 • 0:00:00 6.59it/s v_num: 27 valid_loss: 0.573 valid_acc: 0.794
+[rank: 0] Monitored metric valid_loss did not improve in the last 15 records. Best score: 0.560. Signaling Trainer to stop.
+[rank: 3] Monitored metric valid_loss did not improve in the last 15 records. Best score: 0.560. Signaling Trainer to stop.
+[rank: 1] Monitored metric valid_loss did not improve in the last 15 records. Best score: 0.560. Signaling Trainer to stop.
+[rank: 2] Monitored metric valid_loss did not improve in the last 15 records. Best score: 0.560. Signaling Trainer to stop.
+Epoch 41/499 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421/421 0:01:03 • 0:00:00 6.62it/s v_num: 27 valid_loss: 0.563 valid_acc: 0.800
+Restoring states from the checkpoint path at /home/eaguayo/workspace/DeepLearning/taller1/checkpoints/best_model-v9.ckpt
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Loaded model weights from the checkpoint at /home/eaguayo/workspace/DeepLearning/taller1/checkpoints/best_model-v9.ckpt
+/home/eaguayo/.local/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:216: Using `DistributedSampler` with the dataloaders. During `trainer.test()`, it is recommended to use `Trainer(devices=1, num_nodes=1)` to ensure each sample/batch gets evaluated exactly once. Otherwise, multi-device settings use `DistributedSampler` that replicates some samples to make sure all devices have same batch size in case of uneven inputs.
+Tiempo de entrenamiento en minutos: 47.46
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+Tiempo de entrenamiento en minutos: 47.38
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+Tiempo de entrenamiento en minutos: 47.38
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+Tiempo de entrenamiento en minutos: 47.38
+Muestras de entrenamiento: 54000
+Muestras de validación: 6000
+Muestras de evaluación: 10000
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         test_acc          │    0.7954999804496765     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79/79 0:00:03 • 0:00:00 23.17it/s  

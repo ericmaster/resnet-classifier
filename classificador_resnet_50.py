@@ -45,14 +45,14 @@ if DEBUG_MODE:
     print("Modo depuración activado: usando dataset ligero y parámetros reducidos.")
 else:
     BATCH_SIZE = 32
-    NUM_EPOCHS = 100
+    NUM_EPOCHS = 500
     print("Modo completo activado: usando configuración completa.")
 
 # Crear el directorio de checkpoints si no existe
 os.makedirs("checkpoints/", exist_ok=True)
 
 # DataModule class
-class FMINST_DataModule(pl.LightningDataModule):
+class FMNIST_DataModule(pl.LightningDataModule):
     def __init__(self, data_path="./"):
         super().__init__()
         self.data_path = data_path
@@ -150,9 +150,11 @@ class ResNet50TransferLearning(pl.LightningModule):
         self.model.fc = nn.Linear(in_features, num_classes)
 
         for param in self.model.parameters():
-            param.requires_grad = False
-        for param in self.model.fc.parameters():
             param.requires_grad = True
+        # for param in self.model.layer4.parameters():
+        #     param.requires_grad = True
+        # for param in self.model.fc.parameters():
+        #     param.requires_grad = True
  
         # Pérdida y métricas
         self.criterion = nn.CrossEntropyLoss()
@@ -195,7 +197,7 @@ if __name__ == "__main__":
     torch.manual_seed(47)
 
     # Initialize DataModule
-    data_module = FMINST_DataModule(data_path='./data')
+    data_module = FMNIST_DataModule(data_path='./data')
 
     # Initialize Model
     pytorch_model = ResNet50TransferLearning(num_classes=10, learning_rate=1e-3)
@@ -213,7 +215,7 @@ if __name__ == "__main__":
     early_stop_callback = EarlyStopping(
         monitor='valid_loss',
         min_delta=0.00,
-        patience=10,
+        patience=15,
         verbose=True,
         mode='min'
     )
@@ -224,7 +226,7 @@ if __name__ == "__main__":
         max_epochs=NUM_EPOCHS,
         accelerator='gpu' if torch.cuda.is_available() else 'cpu',
         devices='auto',
-        log_every_n_steps=1000,
+        log_every_n_steps=10,
         logger=logger,
         callbacks=[callback_check, callback_tqdm, early_stop_callback]
     )
